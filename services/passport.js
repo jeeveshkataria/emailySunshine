@@ -37,35 +37,17 @@ passport.use(
         callbackURL: '/auth/google/callback',
         proxy : true
       },
-      (accessToken , refreshToken , profile , done ) => {
-        User.findOne({ googleID : profile.id  }).then( existingUser => {
+      async (accessToken , refreshToken , profile , done ) => {
+       const existingUser = await  User.findOne({ googleID : profile.id  })
+     
             if(existingUser)
             {
-
-              //we have record with profile id
-              done( null , existingUser );
-              //tells passport about user
+              return done( null , existingUser );
             } 
-            else
-            {
-              // we dont have a user with profile id
-              new User({ googleID : profile.id })
-              .save()
-              .then( user => done( null , user));
-
-
-            }
-
+           
+            const user =  await  new User({ googleID : profile.id }).save()
+            done (null , user );
           }
-
-          )
-        //anytime we reach our database we are initiating async 
-        // connection
-        
-        
-        
-        
-      }
-    )
+        )
   );
   
