@@ -2,7 +2,7 @@
 //  and survey form review
 
 import React , { Component } from 'react';
-import surveyForm from './SurveyForm';
+import SurveyForm from './SurveyForm';
 import SurveyFormReview from './SurveyFormReview';
 
 class SurveyNew extends Component {
@@ -14,9 +14,7 @@ class SurveyNew extends Component {
             return <SurveyFormReview />;
         }
 
-        return <SurveyForm 
-        onSurveySubmit = {() => this.setState({ showFormReview : true })}
-         />;
+        return <SurveyForm onSurveySubmit = {() => this.setState({ showFormReview : true })}/>;
     } 
     render() {
         return (
