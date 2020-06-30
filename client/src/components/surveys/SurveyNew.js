@@ -1,3 +1,6 @@
+//survey new shows survey form 
+//  and survey form review
+
 import React , { Component } from 'react';
 import surveyForm from './SurveyForm';
 import SurveyForm from './SurveyForm';
