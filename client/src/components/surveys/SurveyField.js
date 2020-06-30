@@ -3,10 +3,11 @@
 import React from 'react';
 
 
-export default () => {
+export default ({ input }) => {
+  
     return (
         <div>
-            SurveyField!
+            <input  {...input}  />
         </div>
     );
 };
