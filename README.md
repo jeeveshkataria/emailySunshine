@@ -1,7 +1,7 @@
 # emailySunshine
-Webservice : Client can send mail to multiple customers to get feedback of the product which client have developed using this service.
-How ro run 
-Clone the repository!
+Webservice : Client can send mail to multiple customers to get feedback of the product which client have developed using this service.\
+How ro run \
+Clone the repository!\
 
 Following command to open in Localhost:
 open Terminal , path : server/
