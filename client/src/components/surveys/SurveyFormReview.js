@@ -8,10 +8,10 @@ import formFields  from './formFields';
 const SurveyFormReview = ({ onCancel , formValues }) => {
     const reviewFields = _.map(formFields , ({ name , label }) => {
         return (
-            <div key = {field.name}>
-                <label>{field.label}</label>
+            <div key = {name}>
+                <label>{label}</label>
                 <div>
-                    {formValues[field.name]}
+                    {formValues[name]}
                 </div>
             </div>
         ); 
