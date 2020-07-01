@@ -1,14 +1,32 @@
 // survey form review show users about their review
 
-
+import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
+import formFields  from './formFields';
 
 const SurveyFormReview = ({ onCancel , formValues }) => {
+    const reviewFields = _.map(formFields , field => {
+        return (
+            <div>
+                <label>
+                    {field.label}
+                </label>
+                <div>
+                    {formValues[field.name]}
+                </div>
+            </div>
+        ); 
+    });
+    
+    
+    
+    
+    
     return (
         <div>
             <h5>Please confirm your Entries:</h5>
-          
+            {reviewFields}
             <button className = "yellow darken-3 btn-flat" onClick = {onCancel}>
             Back
             </button>
