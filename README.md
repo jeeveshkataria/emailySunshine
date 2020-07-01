@@ -1,10 +1,10 @@
 # emailySunshine
 Webservice : Client can send mail to multiple customers to get feedback of the product which client have developed using this service.\
 How ro run \
-Clone the repository! &nbsp
+Clone the repository! <br/>
 
-Following command to open in Localhost: &nbsp
-open Terminal , path : server/ &nbsp
+Following command to open in Localhost: <br/>
+open Terminal , path : server/ <br/>
 run "npm install"
 change path to ' cd server/client/ '
 run "npm install"
